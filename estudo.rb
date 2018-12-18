@@ -1,6 +1,14 @@
 require 'rake'
 require 'json'
+require 'yaml'
 
-file = File.read('./aluno.yml')
-
+file = YAML.load_file 'aluno.yml'
+puts "Arquivo completo"
 puts file
+puts "****************"
+puts "Aluno completo"
+puts file['aluno']
+puts "****************"
+puts "Nome do aluno"
+puts file['aluno']['nome']
+puts "****************"
